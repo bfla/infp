@@ -1,0 +1,30 @@
+doctype html
+html.fill-height
+  head
+    / meta tags
+    == yield :head
+
+    / styles
+    == render 'layouts/headstyles'
+    == yield :extra_stylesheets
+
+    / scripts
+    == render 'layouts/headscripts'
+    == yield :head_javascripts
+
+  body.fill-height.background
+    == render 'layouts/standardModals'
+    == yield :extra_modals
+
+    / Top navbar goes here
+    == render 'layouts/navbar'
+
+    .container.pad-top-lg
+      / Body goes here
+      == yield
+
+    / Footer goes here
+    == render 'layouts/footer'
+    
+    == yield :end
+    == render 'layouts/bottomScripts'

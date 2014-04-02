@@ -1,0 +1,12 @@
+li.dropdown
+  a.dropdown-toggle.nav-link href="#" data-toggle="dropdown" 
+    .nav-link
+      | &nbsp;
+      | Placeholder
+      /- if !current_user.first_name.blank?
+        /= current_user.first_name
+      /- else
+        /= current_user.email
+      b.caret
+  ul.dropdown-menu
+    li = link_to "Your Home Page", home_path

@@ -1,0 +1,111 @@
+// Spacing variables ======================
+$mainPadding: 70px;
+$mediumPadding: 20px;
+$smallPadding: 10px;
+$topNavbarHeight: 50px;
+$footerHeight: 50px;
+// Color pallette =============================
+$vibrantGreen: rgb(125,168,23);
+$forestyGreen: rgb(56,99,81);
+$grassyGreen: rgb(71, 164, 71);
+$seaGreen: rgb(72,144,72);
+$darkCyan: rgb(0,143,170);
+$foursquareBackground: rgb(234, 232, 228);
+$lightGray: #b2b2b2;
+$extraLightGray: #E1E1E1;
+$orange: rgb(255,136,51);
+
+// Custom colors
+$brandColor: white;
+$navColor: $darkCyan;
+$navLinkColor: $extraLightGray;
+$navLinkHover: white;
+$backgroundColor: $foursquareBackground;
+$iconBackground: $vibrantGreen;
+$ratingColor: $orange;
+$hashtagColor: $orange;
+// Font variables
+$brandFont: 'Monda';
+
+
+// Import navbar styles======================
+
+
+// Universal styles=================================
+.white {
+  background:#ffffff;
+  opacity:1.0;
+}
+
+.rating-color {   color: $ratingColor; }
+
+.background {     background: $backgroundColor; }
+
+.subtle-text {    color: $lightGray; }
+
+.extra-subtle {   color: $lightGray; }
+
+.hashtag {        color: $hashtagColor; }
+
+.margin-left-sm { margin-left:$smallPadding; }
+
+.margin-top-sm {  margin-top:$smallPadding; }
+
+.remove-margin-top {margin-top:0px;}
+
+.remove-bottom-margin {margin-bottom:0px;}
+
+.pad-left-sm {    padding-left: $smallPadding; }
+
+.pad-top-sm {     padding-top:$smallPadding;}
+
+.pad-top-md {     padding-top: $mediumPadding; }
+
+.pad-top-lg {     padding-top: $mainPadding; }
+
+.pad-bottom-huge { padding-bottom:200px;}
+
+.no-spacing { 
+                  padding:0px;
+                  margin:0px;}
+
+.tribe-background { background: $navColor; }
+
+.tribe-subtle { background: $lightGray;}
+
+.add-hairline {   border: 1px solid #e1e1e1}
+
+h1 {              font-family:$brandFont;}
+
+.greenify { color:#65b045;}
+
+// Banner styles=================================
+@import 'navbar';
+.brand {
+                  font-family: $brandFont;
+                  color: $brandColor;
+
+  &:visited {     color: $brandColor; }
+  &:hover {       color: $brandColor; }
+}
+
+// Footer style====================================
+#footer {
+                  background:none;
+                  border:none;
+                  box-shadow:none;
+                  height:$footerHeight;}
+
+// Sticky footers==================================
+.fill-height {    height:100%;} // add this to a body & html elements
+#wrap {           min-height:100%;} // add this around the main page content
+  
+#main { // add this to the main content or container div
+                  overflow:auto;
+                  padding-bottom:$footerHeight;}
+.flush-footer { // surround footer partial with this div
+                  position:relative;
+                  margin-top:-$footerHeight;
+                  padding-top:$mediumPadding;
+                  clear:both;
+}

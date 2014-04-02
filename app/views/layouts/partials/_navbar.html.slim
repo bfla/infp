@@ -1,0 +1,40 @@
+/ This isn't really done properly for mobile.  Should be fixed later.
+nav.navbar.navbar-fixed-top.navbar-inverse.navbar-color.navbar-border role="navigation"
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-collapsable"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      /a.navbar-brand.brand href=home_path camp&Lambda;wesome
+      a.navbar-brand.brand href=home_path INFP Joy
+    / Collect the nav links, forms, and other content for toggling
+    #bs-collapsable.collapse.navbar-collapse
+      / Left Navbar section
+      = render 'layouts/searchNav'
+        ul.nav.navbar-nav.navbar-left.help-marker
+
+          /li
+            /a
+              /span.glyphicon.glyphicon-info-sign.nav-link
+      ul.nav.navbar-nav
+        li = link_to "Best of Michigan", state_path(1), class:"nav-link"
+
+      
+      / Navbar pulled right
+      ul.nav.navbar-nav.navbar-right
+        /- if user_signed_in?
+          /= render 'layouts/dropdown'
+        - else
+          /li = link_to 'Sign up', new_user_registration_path, class:"nav-link"
+          /a href=new_user_registration_path
+            button.btn.btn-success Sign Up
+          /li = link_to 'Sign in', new_user_session_path, class:"nav-link"
+          li.nav-link
+            a#signupTrigger href="#" data-toggle="modal" data-target="#signupModal" 
+              .nav-link Sign up
+          li.nav-link
+            a#signinTrigger href="#" data-toggle="modal" data-target="#signinModal" 
+              .nav-link Sign in
