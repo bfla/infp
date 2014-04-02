@@ -13,24 +13,16 @@ nav.navbar.navbar-fixed-top.navbar-inverse.navbar-color.navbar-border role="navi
     / Collect the nav links, forms, and other content for toggling
     #bs-collapsable.collapse.navbar-collapse
       / Left Navbar section
-      = render 'layouts/searchNav'
-        ul.nav.navbar-nav.navbar-left.help-marker
-
-          /li
-            /a
-              /span.glyphicon.glyphicon-info-sign.nav-link
-      ul.nav.navbar-nav
-        li = link_to "Best of Michigan", state_path(1), class:"nav-link"
-
+      /= render 'layouts/searchNav'
       
       / Navbar pulled right
       ul.nav.navbar-nav.navbar-right
         /- if user_signed_in?
           /= render 'layouts/dropdown'
-        - else
+        /- else
           /li = link_to 'Sign up', new_user_registration_path, class:"nav-link"
           /a href=new_user_registration_path
-            button.btn.btn-success Sign Up
+            /button.btn.btn-success Sign Up
           /li = link_to 'Sign in', new_user_session_path, class:"nav-link"
           li.nav-link
             a#signupTrigger href="#" data-toggle="modal" data-target="#signupModal" 

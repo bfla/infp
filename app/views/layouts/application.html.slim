@@ -5,26 +5,26 @@ html.fill-height
     == yield :head
 
     / styles
-    == render 'layouts/headstyles'
+    == render 'layouts/partials/headstyles'
     == yield :extra_stylesheets
 
     / scripts
-    == render 'layouts/headscripts'
+    == render 'layouts/partials/headscripts'
     == yield :head_javascripts
 
   body.fill-height.background
-    == render 'layouts/standardModals'
+    == render 'layouts/partials/standardModals'
     == yield :extra_modals
 
     / Top navbar goes here
-    == render 'layouts/navbar'
+    == render 'layouts/partials/navbar'
 
     .container.pad-top-lg
       / Body goes here
       == yield
 
     / Footer goes here
-    == render 'layouts/footer'
+    == render 'layouts/partials/footer'
     
     == yield :end
-    == render 'layouts/bottomScripts'
+    == render 'layouts/partials/bottomScripts'
